@@ -1,0 +1,761 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(58, 47, 47);
+    background-color: #f1ecec;
+}
+
+/*  COLOR PALET
+    TEXT : color: rgb(58, 47, 47);    
+    bg : ##f1ecec
+
+
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+span {
+    color: blue;
+}
+
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 0 45px;
+    min-height: 75px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+/* LOGO */
+.logo h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #635bff;
+}
+
+/* NAVIGATION */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 800;
+    transition: color 0.2s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #635bff;
+}
+
+/* LOGIN */
+.login {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: #635bff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border: 1px solid #e0e3eb;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #f5f5ff;
+}
+
+.user-icon {
+    color: #172033;
+    font-size: 23px;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 650px) {
+    .header {
+        flex-wrap: wrap;
+        padding: 18px 20px;
+        gap: 18px;
+    }
+
+    .navbar {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+        overflow-x: auto;
+    }
+
+    .navbar a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .login {
+        gap: 10px;
+    }
+
+    .login-btn {
+        padding: 8px 12px;
+    }
+}
+
+
+/*  HERO */
+
+
+.hero {
+    position: relative;
+    min-height: 250px;
+    margin: 30px 15px;
+    padding: 80px 70px 100px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Konten hero */
+.label {
+    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 12px;
+    padding-left: 4px;
+    font-weight: bold;
+}
+
+.judul h1 {
+    max-width: 650px;
+    margin: 0 0 20px;
+    color: #172033;
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.judul span {
+    color: #635bff;
+}
+
+.deskripsi {
+    max-width: 530px;
+}
+
+.deskripsi p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Tombol */
+.tombol {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tombol a {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: #635bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #4f46e5;
+}
+
+.btn-secondary {
+    background: white;
+    color: #635bff;
+    border: 1px solid #dbe1ea;
+}
+
+.btn-secondary:hover {
+    background: #f5f6ff;
+}
+
+
+
+/* category */
+
+.category {
+    margin: 30px 15px;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+.category > h2 {
+    margin: 0 0 25px;
+    text-align: center;
+    /* font-size: 28px; */
+    font-weight: 900;
+    color: #172033;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    position: relative;
+    min-height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #dbe1ea;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-content {
+    position: relative;
+    width: 100%;
+    padding: 25px;
+    color: white;
+}
+
+.category-content h3 {
+    margin: 0 0 15px;
+    font-size: 26px;
+}
+
+.category-content a {
+    display: inline-block;
+    padding: 10px 28px;
+    background-color: #635bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.category-content a:hover {
+    background-color: #4f46e5;
+}
+
+/* Gambar setiap kategori */
+.guitar {
+    background-image: url("../img/gitar.jpg");
+}
+
+.drum {
+    background-image: url("../img/drum.jpg");
+}
+
+.bass {
+    background-image: url("../img/bass.jpg");
+}
+
+.microphone {
+    background-image: url("../img/mic.jpg");
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .category {
+        padding: 20px 15px;
+    }
+
+    .category-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .category-card {
+        min-height: 190px;
+    }
+
+    .category-content h3 {
+        font-size: 23px;
+    }
+}
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 60px;
+}
+
+.media-social {
+    display: flex;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.media-social i {
+    color: rgb(15, 14, 14);
+    margin: 0px 10px;
+}
+
+
+/* OUR-PRODUCTS */
+.our-products {
+    margin: 30px 15px;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+.our-products .section-title {
+    text-align: center;
+    color: #172033;
+    margin: 0 0 35px;
+    font-weight: 900;
+}
+
+/* Setiap kategori */
+.product-category {
+    margin-bottom: 35px;
+}
+
+.product-category h3 {
+    color: #172033;
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+/* Deretan kartu produk */
+.product-list {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 5px 2px 15px;
+}
+
+/* Kartu produk */
+.product-card {
+    flex: 0 0 190px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+}
+
+/* Gambar produk */
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background-color: #f1f5f9;
+}
+
+/* Informasi produk */
+.product-card h4 {
+    margin: 12px 12px 6px;
+    color: #172033;
+    font-size: 15px;
+}
+
+.product-card .price {
+    margin: 0 12px 12px;
+    color: #635bff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Tombol produk */
+.product-btn {
+    display: block;
+    margin: 0 12px 12px;
+    padding: 9px;
+    text-align: center;
+    background-color: #635bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-btn:hover {
+    background-color: #4f46e5;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .our-products {
+        padding: 22px 15px;
+    }
+
+    .product-card {
+        flex-basis: 160px;
+    }
+
+    .product-card img {
+        height: 125px;
+    }
+}
+
+/* TESTIMONIAL SECTION */
+.testimonial {
+    margin: 30px 15px;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+.testimonial .section-title {
+    text-align: center;
+    color: #172033;
+    font-size: 28px;
+    margin: 0 0 30px;
+}
+
+/* Grid 3 kolom */
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Kartu testimonial */
+.testimonial-card {
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+}
+
+/* Gambar */
+.testimonial-image {
+    height: 170px;
+    background-color: #f1f5f9;
+}
+
+.testimonial-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Isi testimonial */
+.testimonial-content {
+    padding: 15px;
+}
+
+.testimonial-content h3 {
+    margin: 0 0 5px;
+    color: #172033;
+    font-size: 16px;
+}
+
+.testimonial-content .role {
+    margin: 0 0 10px;
+    color: #635bff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.testimonial-content p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.testimonial-content .stars {
+    margin-top: 10px;
+    color: #f59e0b;
+    letter-spacing: 2px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .testimonial-container {
+        grid-template-columns: 2fr 2fr;
+    }
+}
+
+/* HP */
+@media (max-width: 550px) {
+    .testimonial {
+        padding: 25px 15px;
+    }
+
+    .testimonial-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .testimonial-image {
+        height: 200px;
+    }
+}
+
+/* CONTACT SECTION */
+.contact {
+    margin: 30px 15px;
+    padding: 50px 35px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.contact-heading {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.contact-heading h2 {
+    margin: 10px 0;
+    color: #172033;
+    font-size: 32px;
+}
+
+.contact-heading h2 span {
+    color: #635bff;
+}
+
+.contact-heading > p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Dua kolom */
+.contact-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 35px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+/* Informasi kontak */
+.contact-info {
+    padding: 30px;
+    border-radius: 12px;
+    background: #1c2d49;
+    color: #ffffff;
+}
+
+.contact-info h3 {
+    margin: 0 0 12px;
+    font-size: 24px;
+}
+
+.contact-info > p {
+    margin-bottom: 30px;
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.contact-item > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background-color: rgba(99, 91, 255, 0.2);
+    color: #a5a0ff;
+}
+
+.contact-item h4 {
+    margin: 0 0 6px;
+    font-size: 14px;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+/* Social media */
+.contact-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.contact-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #40516b;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.contact-social a:hover {
+    background-color: #635bff;
+    border-color: #635bff;
+}
+
+/* Form */
+.contact-form {
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.contact-form h3 {
+    margin: 0 0 25px;
+    color: #172033;
+    font-size: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background-color: #f8fafc;
+    color: #172033;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #635bff;
+    box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    background-color: #635bff;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contact-btn:hover {
+    background-color: #4f46e5;
+}
+
+/* Responsif */
+@media (max-width: 750px) {
+    .contact {
+        padding: 35px 18px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 22px;
+    }
+}
